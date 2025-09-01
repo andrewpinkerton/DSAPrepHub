@@ -1,6 +1,9 @@
-import { supabase } from "./supabase.js"
-import 'dotenv/config';
+import { supabase } from "./supabase.js";
 
-const { data, error } = await supabase  .from('problem_entry')  .select()
+document.addEventListener("DOMContentLoaded", async () => {
+  const { count } = await supabase
+    .from("problem_entry")
+    .select("*", { count: "exact", head: true });
 
-console.log(data);
+  document.getElementById("streak").innerText = count;
+});
