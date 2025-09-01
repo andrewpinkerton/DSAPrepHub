@@ -1,58 +1,70 @@
-/* Global Styles */
+/* =======================
+   Global Styles
+======================= */
 html {
-  background-color: #0d1117;
-  font-size: 16px; /* base scaling */
+  background-color: #0f1117;
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-family: 'Courier New', monospace;
-  color: #53cff9ec;
+  font-family: 'Inter', sans-serif;
+  color: #d0e6f0;
   line-height: 1.6;
 }
 
-/* Navbar */
+/* =======================
+   Navbar
+======================= */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   border-bottom: 1px solid #1f2937;
+  background-color: #0f1117;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .logo {
   font-size: 1.5rem;
-  color: #00ff95;
-  font-weight: bold;
+  color: #7ef1ff;
+  font-weight: 700;
 }
 
 .logo span {
-  color: #53cff9ec;
+  color: #ffb86c;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #53cff9ec;
+  color: #d0e6f0;
   font-size: 1rem;
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #00ff95;
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffb86c;
 }
 
-/* Hero Section */
+/* =======================
+   Hero Section
+======================= */
 .hero {
   text-align: center;
-  margin: 8vh auto 2vh auto;
+  margin: 6vh auto 4vh auto;
   max-width: 800px;
   padding: 0 1rem;
 }
@@ -60,16 +72,16 @@ body {
 .hero h1 {
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 1.5rem;
-  color: #53cff9ec;
+  color: #7ef1ff;
 }
 
 #beginButton {
-  background-color: #00ff95;
-  color: #1f2937;
-  padding: 1rem 3rem;
-  border-radius: 1.75rem;
-  font-size: 1.25rem;
-  font-weight: bold;
+  background-color: #ffb86c;
+  color: #0f1117;
+  padding: 0.9rem 2.5rem;
+  border-radius: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
   border: none;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -77,14 +89,16 @@ body {
 
 #beginButton:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(0, 255, 149, 0.5);
+  box-shadow: 0 4px 15px rgba(255, 184, 108, 0.5);
 }
 
-/* Info Section */
+/* =======================
+   Info Section
+======================= */
 .infoContainer {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* makes it responsive */
+  flex-wrap: wrap;
   gap: 2rem;
   margin: 3rem auto;
   padding: 0 1rem;
@@ -92,21 +106,206 @@ body {
 }
 
 .infoBlock {
-  color: #53cff9ec;
   text-align: center;
-  flex: 1 1 200px; /* responsive scaling */
+  flex: 1 1 220px;
   min-width: 180px;
   max-width: 250px;
-  height: auto;
   padding: 2rem 1rem;
-  border: 1px solid #1f2937;
-  border-radius: .5rem;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0;
+  background-color: #161b22;
+  box-shadow: 0 2px 12px rgba(255, 184, 108, 0.1);
+  border: 1px solid #1f2937;
 }
 
 .infoBlock h3 {
-  margin: 0.15rem 0 00;
+  margin: 0.25rem 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #7ef1ff;
+}
+
+.infoBlock p {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #d0e6f0;
+}
+
+/* =======================
+   Page Header
+======================= */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #d0e6f0;
+}
+
+#openFormBtn {
+  background-color: #ffb86c;
+  color: #0f1117;
+  padding: 0.65rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#openFormBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 184, 108, 0.4);
+}
+
+/* =======================
+   Problem List
+======================= */
+.problem-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.problem-list li {
+  background-color: #161b22;
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #1f2937;
+  box-shadow: 0 2px 10px rgba(126, 241, 255, 0.1);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.problem-list li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(255, 184, 108, 0.25);
+}
+
+/* =======================
+   Modal Styles
+======================= */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 17, 23, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-content {
+  background-color: #161b22;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ffb86c;
+}
+
+.hidden {
+  display: none;
+}
+
+/* =======================
+   Form Styles (Inside Modal)
+======================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  color: #7ef1ff;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  background-color: #0f1117;
+  color: #d0e6f0;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #ffb86c;
+  box-shadow: 0 0 10px rgba(255, 184, 108, 0.3);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #ffb86c;
+  color: #0f1117;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 184, 108, 0.4);
+}
+
+/* =======================
+   Problem Detail inside Modal
+======================= */
+.problem-detail p {
+  margin: 0.5rem 0;
+  color: #d0e6f0;
+  font-size: 0.95rem;
+}
+
+.problem-detail h2 {
+  color: #7ef1ff;
+  margin-bottom: 1rem;
 }
