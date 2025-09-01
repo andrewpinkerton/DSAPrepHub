@@ -1,0 +1,112 @@
+/* Global Styles */
+html {
+  background-color: #0d1117;
+  font-size: 16px; /* base scaling */
+}
+
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  color: #53cff9ec;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #1f2937;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #00ff95;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #53cff9ec;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #53cff9ec;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00ff95;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin: 8vh auto 2vh auto;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1.5rem;
+  color: #53cff9ec;
+}
+
+#beginButton {
+  background-color: #00ff95;
+  color: #1f2937;
+  padding: 1rem 3rem;
+  border-radius: 1.75rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#beginButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 149, 0.5);
+}
+
+/* Info Section */
+.infoContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* makes it responsive */
+  gap: 2rem;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  max-width: 1200px;
+}
+
+.infoBlock {
+  color: #53cff9ec;
+  text-align: center;
+  flex: 1 1 200px; /* responsive scaling */
+  min-width: 180px;
+  max-width: 250px;
+  height: auto;
+  padding: 2rem 1rem;
+  border: 1px solid #1f2937;
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+}
+
+.infoBlock h3 {
+  margin: 0.15rem 0 00;
+}
