@@ -1,22 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Problems</title>
-    <link rel="stylesheet" href="styles/style.css" />
-  </head>
-  <body>
-    <nav class="navbar">
-      <div class="logo">&gt; DSA <span>Prep Hub</span></div>
-      <ul class="nav-links">
-        <li><a href="/index.html">Dashboard</a></li>
-        <li><a href="/problems.html">Problems</a></li>
-        <li><a href="/progress.html">Progress</a></li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Problems</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <script defer src="scripts/problems.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">&gt; DSA <span>Prep Hub</span></div>
+    <ul class="nav-links">
+      <li><a href="/index.html">Dashboard</a></li>
+      <li><a href="/problems.html" class="active">Problems</a></li>
+      <li><a href="/progress.html">Progress</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="container">
+      <div class="page-header">
+        <h1>Problems</h1>
+        <button id="openFormBtn">Insert New Problem</button>
+      </div>
+
+      <!-- Problem list -->
+      <ul class="problem-list" id="entriesList">
+        <!-- JS appends problems here -->
       </ul>
-    </nav>
-    <main>
-      
-    </main>
-  </body>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal hidden" id="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+
+      <!-- Form inside modal -->
+      <form id="problemForm">
+        <h2>Add Problem</h2>
+        <div class="form-group">
+          <label for="title">Problem Title</label>
+          <input type="text" id="title" name="title" placeholder="e.g., Two Sum" required />
+        </div>
+
+        <div class="form-group">
+          <label for="platform">Platform</label>
+          <select id="platform" name="platform">
+            <option value="LeetCode">LeetCode</option>
+            <option value="HackerRank">NeetCode</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="difficulty">Difficulty</label>
+          <select id="difficulty" name="difficulty">
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category</label>
+          <input type="text" id="category" name="category" placeholder="e.g., Arrays, DP" />
+        </div>
+
+        <div class="form-group">
+          <label for="timeTaken">Time Taken (minutes)</label>
+          <input type="number" id="timeTaken" name="timeTaken" placeholder="e.g., 30" />
+        </div>
+
+        <div class="form-group">
+          <label for="language">Language</label>
+          <select id="language" name="language">
+            <option value="java">Java</option>
+            <option value="cpp">C++</option>
+            <option value="python">Python</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="dateSolved">Date Solved</label>
+          <input type="date" id="dateSolved" name="dateSolved" />
+        </div>
+
+        <div class="form-group">
+          <label for="solution">Solution</label>
+          <textarea id="solution" name="solution" placeholder="Solution" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="reflection">Reflection</label>
+          <textarea id="reflection" name="reflection" placeholder="Reflection" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Add Problem</button>
+      </form>
+
+      <!-- Full problem modal view -->
+      <div class="problem-detail hidden" id="problemDetail">
+        <h2 id="detailTitle"></h2>
+        <p><strong>Platform:</strong> <span id="detailPlatform"></span></p>
+        <p><strong>Difficulty:</strong> <span id="detailDifficulty"></span></p>
+        <p><strong>Category:</strong> <span id="detailCategory"></span></p>
+        <p><strong>Time Taken:</strong> <span id="detailTime"></span> min</p>
+        <p><strong>Language:</strong> <span id="detailLanguage"></span></p>
+        <p><strong>Date Solved:</strong> <span id="detailDate"></span></p>
+        <p><strong>Solution:</strong> <span id="detailSolution"></span></p>
+        <p><strong>Reflection:</strong> <span id="detailReflection"></span></p>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
