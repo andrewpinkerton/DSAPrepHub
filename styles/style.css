@@ -136,6 +136,7 @@ body {
    Page Header
 ======================= */
 .page-header {
+  margin-left: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -149,6 +150,7 @@ body {
 }
 
 #openFormBtn {
+  margin: 1rem 2rem;
   background-color: #ffb86c;
   color: #0f1117;
   padding: 0.65rem 1.5rem;
@@ -176,7 +178,7 @@ body {
 
 .problem-list li {
   background-color: #161b22;
-  margin-bottom: 1rem;
+  margin: 1rem 5rem;
   padding: 1rem 1.5rem;
   border-radius: 10px;
   border: 1px solid #1f2937;
@@ -192,6 +194,18 @@ body {
   transform: scale(1.02);
   box-shadow: 0 4px 12px rgba(255, 184, 108, 0.25);
 }
+
+.problem-text {
+  color: inherit;
+}
+
+pre {
+  background-color: rgb(238, 238, 238);
+  border-radius: 1rem;
+  color: rgba(15, 17, 23, 0.85);
+  padding: 1rem;
+}
+
 
 /* =======================
    Modal Styles
@@ -211,7 +225,7 @@ body {
 
 .modal-content {
   background-color: #161b22;
-  padding: 2rem;
+  padding: 0 1rem 0 1rem;
   border-radius: 12px;
   max-width: 600px;
   width: 90%;
@@ -222,12 +236,20 @@ body {
 
 .close-btn {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.5rem;
+  top: .5rem;
+  right: 2rem;
+  font-size: 2.5rem;
   cursor: pointer;
   color: #ffb86c;
 }
+
+.delete-btn {
+  position: absolute;
+  top: 1.75rem;
+  right: 4.65rem;
+  font-size: large;
+}
+
 
 .hidden {
   display: none;
