@@ -11,4 +11,22 @@ document.addEventListener("DOMContentLoaded", async () => {
   myButton.addEventListener("click", () => {
     window.location.href = "problems.html"
   });
+
+  greeting()
 });
+
+function greeting() {
+   const now = new Date();
+   const hours = now.getHours();
+   let greetingString;
+
+   if (hours >= 0 && hours < 12) {
+    greetingString = "Morning";
+   } else if (hours >= 12 && hours < 17) {
+    greetingString = "Afternoon"
+   } else if (hours >= 17 && hours < 24) {
+    greetingString = "Evening"
+   }
+  console.log(now.getHours())
+  document.getElementById("greeting").innerText = "Good " + greetingString+ ", Andrew"
+}
