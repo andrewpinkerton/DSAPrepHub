@@ -2,7 +2,7 @@
    Global Styles
 ======================= */
 html {
-  background-color: #101820; /* deep navy */
+  background-color: #101820;
   font-size: 16px;
   scroll-behavior: smooth;
 }
@@ -31,12 +31,12 @@ body {
 
 .logo {
   font-size: 1.5rem;
-  color: #3b82f6; /* professional blue */
+  color: #3b82f6;
   font-weight: 700;
 }
 
 .logo span {
-  color: #14b8a6; /* teal accent */
+  color: #14b8a6;
 }
 
 .nav-links {
@@ -56,7 +56,7 @@ body {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #10b981; /* gold accent */
+  color: #10b981;
 }
 
 /* =======================
@@ -76,7 +76,7 @@ body {
 }
 
 #beginButton {
-  background-color: #10b981; /* gold */
+  background-color: #10b981;
   color: #101820;
   padding: 0.9rem 2.5rem;
   border-radius: 1.5rem;
@@ -89,7 +89,7 @@ body {
 
 #beginButton:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(234, 179, 8, 0.5);
+  box-shadow: 0 4px 15px #10b981;;
 }
 
 /* =======================
@@ -123,7 +123,7 @@ body {
 .infoBlock h3 {
   margin: 0.25rem 0 0.5rem 0;
   font-size: 1.1rem;
-  color: #14b8a6; /* teal */
+  color: #14b8a6;
 }
 
 .infoBlock p {
@@ -164,7 +164,7 @@ body {
 
 #openFormBtn:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(234, 179, 8, 0.4);
+  box-shadow: 0 4px 15px #10b981;;
 }
 
 /* =======================
@@ -192,7 +192,7 @@ body {
 
 .problem-list li:hover {
   transform: scale(1.02);
-  box-shadow: 0 4px 12px rgba(234, 179, 8, 0.25);
+  box-shadow: 0 4px 12px #10b981;;
 }
 
 .problem-text {
@@ -247,7 +247,7 @@ pre {
   top: 1.70rem;
   right: 4.65rem;
   font-size: large;
-  background-color: rgba(239, 68, 68, 0.85); /* red for delete */
+  background-color: rgba(239, 68, 68, 0.85);
   color: #f3f4f6;
   font: inherit;
   border: none;
@@ -329,7 +329,7 @@ textarea {
 
 .submit-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(234, 179, 8, 0.4);
+  box-shadow: 0 4px 15px #10b981;;
 }
 
 /* =======================
