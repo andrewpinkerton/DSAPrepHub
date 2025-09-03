@@ -2,7 +2,7 @@
 node_modules/
 
 # env files
-.env
+supabase.js
 
 # logs
 npm-debug.log*
