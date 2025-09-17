@@ -35,7 +35,7 @@ async function loadUserStats() {
     .select("date_solved")
     .eq("user_id", user.id)
     .order("date_solved", { ascending: false })
-    .limit(10);
+    .limit(100);
 
   const streak = calculateStreak(recentEntries);
   const streakEl = document.getElementById("streak");
