@@ -62,6 +62,7 @@ function addEventListeners() {
       time_taken_minutes: problemForm.timeTaken.value,
       language: problemForm.language.value,
       date_solved: problemForm.dateSolved.value,
+      problem: problemForm.problem.value,
       solution_code: problemForm.solution.value,
       reflection: problemForm.reflection.value,
     };
@@ -110,6 +111,7 @@ function openDetail(problems, index) {
   setText("detailTime", p.time_taken_minutes);
   setText("detailLanguage", p.language);
   setText("detailDate", p.date_solved);
+  setText("detailProblem", p.problem);
   setText("detailSolution", p.solution_code);
   setText("detailReflection", p.reflection);
 

@@ -44,7 +44,7 @@
           <label for="platform">Platform</label>
           <select id="platform" name="platform"  required>
             <option value="LeetCode">LeetCode</option>
-            <option value="HackerRank">NeetCode</option>
+            <option value="NeetCode">NeetCode</option>
           </select>
         </div>
 
@@ -82,6 +82,11 @@
         </div>
 
         <div class="form-group">
+          <label for="problem">Problem</label>
+          <textarea id="problem" name="problem" placeholder="problem" required></textarea>
+        </div>
+
+        <div class="form-group">
           <label for="solution">Solution</label>
           <textarea id="solution" name="solution" placeholder="Solution" required></textarea>
         </div>
@@ -96,13 +101,14 @@
 
       <div class="problem-detail hidden" id="problemDetail">
         <h2 id="detailTitle" ></h2>
-        <p><strong>Problem Id:</strong> <span id="detailId"></span></p>
         <p><strong>Platform:</strong> <span id="detailPlatform"></span></p>
         <p><strong>Difficulty:</strong> <span id="detailDifficulty"></span></p>
         <p><strong>Category:</strong> <span id="detailCategory"></span></p>
         <p><strong>Time Taken:</strong> <span id="detailTime"></span> min</p>
         <p><strong>Language:</strong> <span id="detailLanguage"></span></p>
         <p><strong>Date Solved:</strong> <span id="detailDate"></span></p>
+        <strong>Problem:</strong>
+        <pre><code id="detailProblem" class="problem-text"></code></pre>
         <strong>Solution:</strong>
         <pre><code id="detailSolution" class="problem-text"></code></pre>
         <strong>Reflection:</strong>
