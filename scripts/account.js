@@ -9,7 +9,9 @@ const form = document.querySelector("form");
 const logoutBtn = document.getElementById("logoutBtn");
 
 async function loadUser() {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) {
     window.location.href = "/login.html";
     return;
@@ -40,7 +42,9 @@ async function loadUser() {
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
 
   await supabase.from("profiles").upsert({
     id: user.id,
