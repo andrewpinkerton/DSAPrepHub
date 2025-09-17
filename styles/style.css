@@ -192,11 +192,14 @@ body {
 
 .problem-list li:hover {
   transform: scale(1.02);
-  box-shadow: 0 4px 12px #10b981;;
+  box-shadow: 0 4px 12px #10b981;
 }
 
 .problem-text {
   color: inherit;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 pre {
@@ -204,8 +207,12 @@ pre {
   border-radius: 1rem;
   color: #101820;
   padding: 1rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-width: 100%;
+  box-sizing: border-box;
 }
-
 /* =======================
    Modal Styles
 ======================= */
@@ -420,4 +427,8 @@ textarea {
 
 #logoutBtn:hover {
   background-color: #ef4444;
+}
+
+#toggleForm {
+  color:#f3f4f6;
 }
