@@ -204,7 +204,6 @@ pre {
   border-radius: 1rem;
   color: #101820;
   padding: 1rem;
-  overflow: hidden;
 }
 
 /* =======================
@@ -306,7 +305,7 @@ input:focus,
 select:focus,
 textarea:focus {
   border-color: #10b981;
-  box-shadow: 0 0 10px rgba(234, 179, 8, 0.3);
+  box-shadow: 0 0 10px #10b981;
 }
 
 textarea {
@@ -339,7 +338,6 @@ textarea {
   margin: 0.5rem 0;
   color: #f3f4f6;
   font-size: 0.95rem;
-  overflow-x: hidden;
 }
 
 .problem-detail h2 {
@@ -354,4 +352,72 @@ textarea {
 #detailTitle {
   margin-bottom: 0;
   display: inline-block;
+}
+
+
+/* =======================
+   Account Page
+======================= */
+.account-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  max-width: 1000px;
+}
+
+.profile-card {
+  background-color: #1b263b;
+  border: 1px solid #243b55;
+  box-shadow: 0 2px 12px rgba(59, 130, 246, 0.15);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  border: 3px solid #10b981;
+  margin-bottom: 1rem;
+}
+
+.profile-card h2 {
+  margin: 0.5rem 0;
+  color: #3b82f6;
+}
+
+.profile-card p {
+  color: #f3f4f6;
+  margin-bottom: 1rem;
+}
+
+.account-form {
+  background-color: #1b263b;
+  border: 1px solid #243b55;
+  box-shadow: 0 2px 12px rgba(59, 130, 246, 0.15);
+  padding: 2rem;
+  border-radius: 12px;
+  flex: 2 1 400px;
+}
+
+#logoutBtn {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgba(239, 68, 68, 0.85);
+  color: #f3f4f6;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#logoutBtn:hover {
+  background-color: #ef4444;
 }

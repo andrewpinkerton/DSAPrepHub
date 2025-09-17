@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <script type="module" src="scripts/account.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">&gt; DSA <span>Prep Hub</span></div>
+    <ul class="nav-links">
+      <li><a href="/index.html">Dashboard</a></li>
+      <li><a href="/problems.html">Problems</a></li>
+      <li><a href="/progress.html">Progress</a></li>
+      <li><a href="/account.html" class="active">Account</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1>My Account</h1>
+      <p>Manage your profile and account settings here.</p>
+    </section>
+
+    <section class="account-container">
+      <div class="profile-card">
+        <h2 id="username">Loading...</h2>
+        <p id="emailDisplay">Loading...</p>
+      </div>
+
+      <div class="account-form">
+        <form>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" />
+          </div>
+
+          <div class="form-group">
+            <label for="emailInput">Email Address</label>
+            <input type="email" id="emailInput" disabled />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Change Password</label>
+            <input type="password" id="password" placeholder="Enter new password" />
+          </div>
+
+          <button type="submit" class="submit-btn">Save Changes</button>
+          <button type="button" id="logoutBtn">Log Out</button>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+<script type="module" src="/scripts/auth.js"></script>
+</html>
