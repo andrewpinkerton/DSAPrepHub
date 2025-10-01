@@ -16,23 +16,81 @@
         <li><a href="/account.html">Account</a></li>
       </ul>
     </nav>
+
     <main>
       <div class="hero">
-        <h1 id="greeting"></h1>
-        <button id="beginButton">Enter Today's Problem</button>
+        <h1 id="greeting">Good Morning, User!</h1>
+        <p class="hero-subtitle">Ready to conquer today's coding challenge?</p>
+        <button id="beginButton">🚀 Start Today's Problem</button>
       </div>
-      <div class="infoContainer">
-        <div class="infoBlock" id="streakblock">
-          <h3>Streak</h3>
-          <p id="streak"></p>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-title">Current Streak</span>
+            <div class="stat-icon">🔥</div>
+          </div>
+          <div class="stat-value" id="streakValue">0</div>
+          <div class="stat-label">days in a row</div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="streakProgress" style="width: 0%"></div>
+          </div>
         </div>
-        <div class="infoBlock" id="problemsSolved">
-          <h3>Problems Solved</h3>
-          <p id="solved"></p>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-title">Problems Solved</span>
+            <div class="stat-icon">✓</div>
+          </div>
+          <div class="stat-value" id="solvedValue">0</div>
+          <div class="stat-label">total problems</div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="solvedProgress" style="width: 0%"></div>
+          </div>
         </div>
-        <div class="infoBlock" id="level">
-          <h3>Level</h3>
-        <p>Easy</p>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-title">Current Level</span>
+            <div class="stat-icon">⭐</div>
+          </div>
+          <div class="stat-value level-value" id="levelValue">Easy</div>
+          <div class="stat-label">keep pushing!</div>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <div class="chart-card">
+          <h2 class="chart-title">Problems by Difficulty</h2>
+          <div class="difficulty-chart" id="difficultyChart">
+            <div class="bar-container">
+              <div class="bar bar-easy" id="easyBar" style="height: 0px">
+                <span class="bar-value" id="easyCount">0</span>
+              </div>
+              <span class="bar-label">Easy</span>
+            </div>
+            <div class="bar-container">
+              <div class="bar bar-medium" id="mediumBar" style="height: 0px">
+                <span class="bar-value" id="mediumCount">0</span>
+              </div>
+              <span class="bar-label">Medium</span>
+            </div>
+            <div class="bar-container">
+              <div class="bar bar-hard" id="hardBar" style="height: 0px">
+                <span class="bar-value" id="hardCount">0</span>
+              </div>
+              <span class="bar-label">Hard</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="recent-activity">
+        <div class="activity-card">
+          <h2 class="chart-title">Recent Activity</h2>
+          <div id="activityList">
+            <p class="empty-state">No recent activity yet. Start solving problems!</p>
+          </div>
         </div>
       </div>
     </main>
