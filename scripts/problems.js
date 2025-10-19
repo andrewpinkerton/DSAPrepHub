@@ -1,5 +1,7 @@
 import { supabase } from "./supabase.js";
 
+let currentProblemId = null;
+
 document.addEventListener("DOMContentLoaded", async () => {
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) {
@@ -75,16 +77,30 @@ function addEventListeners() {
   });
 
   deleteBtn?.addEventListener("click", async () => {
-    const { data: { user } } = await supabase.auth.getUser();
-    const problemId = document.getElementById("detailId")?.innerText;
+    if (!currentProblemId) {
+      alert("Error: No problem selected");
+      return;
+    }
 
-    await supabase
+    const confirmDelete = confirm("Are you sure you want to delete this problem entry?");
+    if (!confirmDelete) return;
+
+    const { data: { user } } = await supabase.auth.getUser();
+
+    const { error } = await supabase
       .from("problem_entry")
       .delete()
-      .eq("problem_id", problemId)
+      .eq("problem_id", currentProblemId)
       .eq("user_id", user.id);
 
+    if (error) {
+      console.error("Delete error:", error);
+      alert("Failed to delete problem. Please try again.");
+      return;
+    }
+
     modal.classList.add("hidden");
+    currentProblemId = null;
     await renderEntries(user.id);
   });
 }
@@ -95,6 +111,8 @@ function openDetail(problems, index) {
   const problemDetail = document.getElementById("problemDetail");
   const modal = document.getElementById("modal");
 
+  currentProblemId = p.problem_id;
+
   problemForm.classList.add("hidden");
   problemDetail.classList.remove("hidden");
 
@@ -103,7 +121,6 @@ function openDetail(problems, index) {
     if (el) el.innerText = value || "N/A";
   };
 
-  setText("detailId", p.problem_id);
   setText("detailTitle", p.title);
   setText("detailPlatform", p.platform);
   setText("detailDifficulty", p.difficulty);

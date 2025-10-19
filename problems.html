@@ -9,13 +9,19 @@
 </head>
 <body>
   <nav class="navbar">
-    <div class="logo">&gt; DSA <span>Prep Hub</span></div>
-    <ul class="nav-links">
-        <li><a href="/index.html">Dashboard</a></li>
-        <li><a href="/problems.html" class="active">Problems</a></li>
-        <li><a href="/account.html">Account</a></li>
-      </ul>
-  </nav>
+  <div class="logo">&gt; DSA <span>Prep Hub</span></div>
+  <ul class="nav-links">
+    <li><a href="/index.html">Dashboard</a></li>
+    <li><a href="/problems.html">Problems</a></li>
+    <li><a href="/account.html">Account</a></li>
+  </ul>
+  <div class="theme-toggle-wrapper">
+    <label class="theme-toggle">
+      <input type="checkbox" id="themeToggle">
+      <span class="toggle-slider"></span>
+    </label>
+  </div>
+</nav>
 
   <main>
     <div class="container">
@@ -119,4 +125,5 @@
   </div>
 </body>
 <script type="module" src="scripts/auth.js"></script>
+<script type="module" src="/scripts/theme.js"></script>
 </html>
