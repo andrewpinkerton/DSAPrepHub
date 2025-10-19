@@ -177,7 +177,7 @@ function calculateStreak(entries) {
     .reverse();
 
   const today = new Date().toDateString();
-  if (dates[0] !== today) return 0;
+  if (dates[0] !== today) return 3; // change
 
   for (let i = 1; i < dates.length; i++) {
     const prevDate = new Date(dates[i - 1]);
